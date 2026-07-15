@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick Games - Compra e Venda de Consoles e Acessórios</title>
+    <!-- Tailwind CSS para um design moderno e rápido -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gamer: {
+                            purple: '#8b5cf6',
+                            dark: '#0f172a',
+                            card: '#1e293b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-900 text-gray-100 font-sans antialiased">
+
+    <!-- HEADER / NAVEGAÇÃO -->
+    <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <span class="text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+                    RICK GAMES
+                </span>
+            </div>
+            
+            <!-- Links de Navegação -->
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#comprar" class="hover:text-purple-400 transition-colors">Comprar</a>
+                <a href="#vender" class="hover:text-purple-400 transition-colors">Vender meu Game</a>
+                <a href="#sobre" class="hover:text-purple-400 transition-colors">Quem Somos</a>
+                <a href="#contato" class="hover:text-purple-400 transition-colors">Contato</a>
+            </nav>
+
+            <!-- Botão de Ação -->
+            <div>
+                <a href="#vender" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-2.5 px-5 rounded-full transition-all shadow-lg shadow-purple-500/20 text-sm">
+                    Avaliar meu Game
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (Destaque Principal) -->
+    <section class="relative py-20 lg:py-32 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/40 via-slate-900 to-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-purple-400 font-bold tracking-widest text-xs uppercase block mb-3">A melhor avaliação do mercado</span>
+                <h1 class="text-4xl sm:text-6xl font-black text-white leading-none mb-6">
+                    Seu próximo level começa <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">aqui.</span>
+                </h1>
+                <p class="text-gray-400 text-lg mb-8 max-w-lg">
+                    Compre consoles novos e seminovos com garantia, ou venda seu videogame antigo pelo melhor preço com pagamento imediato.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#comprar" class="bg-purple-600 hover:bg-purple-500 text-white font-bold py-4 px-8 rounded-lg text-center transition-all shadow-lg shadow-purple-600/30">
+                        Ver Estoque
+                    </a>
+                    <a href="#vender" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-8 rounded-lg text-center border border-slate-700 transition-all">
+                        Quero Vender
+                    </a>
+                </div>
+            </div>
+            <!-- Elemento Decorativo/Imagem Simbólica -->
+            <div class="relative flex justify-center">
+                <div class="absolute w-72 h-72 bg-purple-500/30 rounded-full blur-3xl -z-10 animate-pulse"></div>
+                <div class="bg-slate-800/80 border border-slate-700 p-8 rounded-2xl shadow-2xl backdrop-blur max-w-sm w-full">
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full font-bold">Destaque da Semana</span>
+                        <span class="text-purple-400 font-bold">R$ 3.890</span>
+                    </div>
+                    <img src="https://i.ibb.co/DHnKqMz0/4e556baf755200ff88177accc2daf26a658e4782-s7vm6cmto6.webp" alt="PS5" class="rounded-xl mb-4 w-full h-70 object-cover">
+                    <h3 class="text-xl font-bold mb-1">PlayStation 5 Slim 1TB</h3>
+                    <p class="text-gray-400 text-sm mb-4">Acompanha 1 controle DualSense + Astro's Playroom. Seminovo com 6 meses de garantia.</p>
+                    <button onclick="alert('Produto adicionado ao interesse! Redirecionando para o WhatsApp...')" class="w-full bg-slate-700 hover:bg-purple-600 text-white font-bold py-2.5 rounded-lg transition-colors">
+                        Tenho Interesse
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPRA (Produtos em Destaque) -->
+    <section id="comprar" class="py-20 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Jogos e Consoles à Venda</h2>
+                <p class="mt-4 text-gray-400">Garanta diversão com produtos revisados e higienizados por nossa equipe técnica.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Produto 1 -->
+                <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-purple-500 transition-all group">
+                    <img src="https://images.unsplash.com/photo-1564468831151-0a25b5d14a0a?auto=format&fit=crop&q=80&w=600" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold">Nintendo Switch OLED 64GB</h3>
+                        <p class="text-sm text-gray-400 mt-2">Console portátil perfeito para jogar onde quiser. Completo na caixa.</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-purple-400 font-bold text-xl">R$ 1.950</span>
+                            <span class="text-xs text-gray-500">Seminovo</span>
+                        </div>
+                        <button onclick="alert('Você será redirecionado para o WhatsApp para fechar a compra.')" class="w-full mt-6 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition-colors">
+                            Comprar no WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-purple-500 transition-all group">
+                    <img src="https://images.unsplash.com/photo-1605901309584-818e25960a8f?auto=format&fit=crop&q=80&w=600" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold">Controle DualSense PS5 Midnight Black</h3>
+                        <p class="text-sm text-gray-400 mt-2">Resposta tátil e gatilhos adaptáveis. Novo e lacrado.</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-purple-400 font-bold text-xl">R$ 420</span>
+                            <span class="text-xs text-green-500 font-semibold">Novo</span>
+                        </div>
+                        <button onclick="alert('Você será redirecionado para o WhatsApp para fechar a compra.')" class="w-full mt-6 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition-colors">
+                            Comprar no WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-purple-500 transition-all group">
+                    <img src="https://images.unsplash.com/photo-1621259182978-f09e5e2b07ae?auto=format&fit=crop&q=80&w=600" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold">Xbox Series S 512GB SSD</h3>
+                        <p class="text-sm text-gray-400 mt-2">Desempenho de nova geração no menor console de todos os tempos.</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-purple-400 font-bold text-xl">R$ 2.100</span>
+                            <span class="text-xs text-gray-500">Seminovo</span>
+                        </div>
+                        <button onclick="alert('Você será redirecionado para o WhatsApp para fechar a compra.')" class="w-full mt-6 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition-colors">
+                            Comprar no WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VENDER (Simulador Interativo) -->
+    <section id="vender" class="py-20 bg-slate-850 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-800 border border-slate-700 rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-purple-600/20 rounded-full blur-2xl"></div>
+                
+                <h2 class="text-3xl font-extrabold text-white mb-4">Quer desapegar do seu videogame antigo?</h2>
+                <p class="text-gray-400 mb-8">Nós compramos! Faça uma simulação rápida de quanto o seu console pode valer na Rick Games.</p>
+
+                <!-- Simulador Interativo (JavaScript abaixo controla) -->
+                <form id="quoteForm" onsubmit="calculateQuote(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Qual é o seu console?</label>
+                            <select id="consoleSelect" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500">
+                                <option value="ps5">PlayStation 5</option>
+                                <option value="ps4">PlayStation 4</option>
+                                <option value="xboxs">Xbox Series S/X</option>
+                                <option value="switch">Nintendo Switch</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Estado de Conservação</label>
+                            <select id="conditionSelect" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500">
+                                <option value="excellent">Excelente (Na caixa, sem detalhes)</option>
+                                <option value="good">Bom (Poucas marcas de uso)</option>
+                                <option value="fair">Aceitável (Sem caixa ou com marcas)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-lg transition-all shadow-lg shadow-purple-500/20">
+                        Simular Valor de Avaliação
+                    </button>
+                </form>
+
+                <!-- Div de Resultado -->
+                <div id="resultBox" class="mt-8 p-6 bg-slate-900/50 border border-purple-500/30 rounded-xl hidden text-center">
+                    <p class="text-gray-400 text-sm">Estimativa de Avaliação:</p>
+                    <p id="estimatedValue" class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500 mt-2">R$ 0,00</p>
+                    <p class="text-xs text-gray-500 mt-2">*Valor sujeito a testes presenciais na loja.</p>
+                    <a id="whatsappBtn" href="#" target="_blank" class="inline-block mt-4 bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-6 rounded-full text-sm transition-all">
+                        Chamar no WhatsApp para Fechar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / RODAPÉ -->
+    <footer id="contato" class="bg-slate-950 border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <span class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">RICK GAMES</span>
+                <p class="text-sm text-gray-500 mt-4">
+                    O melhor lugar em compra, venda e troca de videogames. Garantia de procedência e preços justos sempre.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-sm font-bold uppercase tracking-widest text-white mb-4">Funcionamento</h4>
+                <p class="text-sm text-gray-400">Segunda a Sexta: 09h às 18h</p>
+                <p class="text-sm text-gray-400 mt-1">Sábado: 09h às 14h</p>
+                <p class="text-sm text-gray-400 mt-3 font-semibold text-purple-400">Rua dos Games, 123 - Centro</p>
+            </div>
+            <div>
+                <h4 class="text-sm font-bold uppercase tracking-widest text-white mb-4">Redes Sociais</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">Instagram</a>
+                    <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">Facebook</a>
+                    <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">YouTube</a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-900 mt-12 pt-6 text-center text-xs text-gray-600">
+            &copy; 2026 Rick Games. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- SCRIPT DA SIMULAÇÃO DE VALOR -->
+    <script>
+        function calculateQuote(event) {
+            event.preventDefault();
+            
+            const consoleType = document.getElementById('consoleSelect').value;
+            const condition = document.getElementById('conditionSelect').value;
+            
+            // Valores base fictícios para compra
+            let baseValue = 0;
+            if (consoleType === 'ps5') baseValue = 3000;
+            else if (consoleType === 'ps4') baseValue = 1100;
+            else if (consoleType === 'xboxs') baseValue = 1500;
+            else if (consoleType === 'switch') baseValue = 1300;
+            
+            // Multiplicador de condição
+            let multiplier = 1.0;
+            if (condition === 'good') multiplier = 0.85;
+            else if (condition === 'fair') multiplier = 0.70;
+            
+            const finalValue = Math.round(baseValue * multiplier);
+            
+            // Exibir o resultado
+            const resultBox = document.getElementById('resultBox');
+            const estimatedValue = document.getElementById('estimatedValue');
+            const whatsappBtn = document.getElementById('whatsappBtn');
+            
+            estimatedValue.innerText = `Até R$ ${finalValue.toLocaleString('pt-BR')}`;
+            
+            // Link customizado para o WhatsApp (exemplo)
+            const text = encodeURIComponent(`Olá Rick Games! Fiz a simulação do meu console (${consoleType.toUpperCase()}) e deu o valor de R$ ${finalValue}. Gostaria de agendar uma avaliação!`);
+            whatsappBtn.href = `https://wa.me/5511999999999?text=${text}`;
+            
+            resultBox.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
